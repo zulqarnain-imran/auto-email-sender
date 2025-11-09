@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 REQUIRED_PACKAGES = ["pandas", "openpyxl"]
 
@@ -28,8 +29,10 @@ def install_missing_packages():
                 sys.exit(1)
 
 def run_main():
+    print("🚀 Starting Professional Email Sender...")
     try:
-        subprocess.check_call([sys.executable, "auto_email_sender.py"])
+        # Run the new professional UI
+        subprocess.check_call([sys.executable, "email_sender_pro.py"])
     except Exception as e:
         print(f"❌ Failed to run main program: {e}")
         sys.exit(1)
